@@ -62,6 +62,7 @@ Copy code
   "title": "Example Book",
   "author": "John Doe"
 }
+
 **Response:**
 201 Created: Book registered successfully
 200 OK: Book with this ISBN already exists
@@ -69,7 +70,8 @@ Get all books
 
 URL: /api/books
 Method: GET
-Response:
+
+**Response:**
 json
 Copy code
 [
@@ -80,6 +82,7 @@ Copy code
     "author": "John Doe"
   }
 ]
+
 **Borrower Management
 Register a new borrower**
 
@@ -92,14 +95,17 @@ Copy code
   "name": "Jane Smith",
   "email": "jane.smith@example.com"
 }
+
 **Response:**
 201 Created: Borrower registered successfully
 400 Bad Request: Error in registration
+
 **Get all borrowers**
 
 URL: /api/borrowers
 Method: GET
-Response:
+
+**Response:**
 json
 Copy code
 [
@@ -109,6 +115,7 @@ Copy code
     "email": "jane.smith@example.com"
   }
 ]
+
 **Borrowing Books
 Borrow a book**
 
@@ -117,7 +124,8 @@ Method: POST
 Request Parameters:
 borrowerId: ID of the borrower
 bookId: ID of the book
-Response:
+
+**Response:**
 201 Created: Book borrowed successfully
 400 Bad Request: Error in borrowing the book
 Return a borrowed book
@@ -126,9 +134,11 @@ URL: /api/borrow-book/return
 Method: POST
 Request Parameters:
 loanId: ID of the loan
+
 **Response:**
 200 OK: Book returned successfully
 400 Bad Request: Error in returning the book
+
 **Data Models**
 **Book**
 id: Unique identifier for the book
